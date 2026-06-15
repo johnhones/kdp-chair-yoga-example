@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Author Opportunity Audit — The Complete Chair Yoga Handbook</title>
+<style>
+  :root {
+    --teal:     #00B5AD;
+    --teal-l:   #E0F7F6;
+    --teal-d:   #007A75;
+    --orange:   #F47421;
+    --orange-l: #FFF0E6;
+    --orange-d: #C05A10;
+    --navy:     #1B3A48;
+    --mid:      #4A6070;
+    --muted:    #7A909E;
+    --light:    #F5F7F8;
+    --border:   #DDE3E7;
+    --white:    #FFFFFF;
+    --black:    #111111;
+    --red:      #C62828;
+    --red-l:    #FFEBEE;
+    --red-d:    #8B0000;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #ECEEF0;
+    color: var(--black);
+    line-height: 1.6;
+    font-size: 13px;
+  }
+
+  /* HEADER */
+  .hdr { background: var(--navy); color: #fff; padding: 40px 56px 32px; border-bottom: 4px solid var(--red); }
+  .hdr-meta { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
+  .hdr h1 { font-size: 28px; font-weight: 700; color: #fff; letter-spacing: -.3px; margin-bottom: 4px; }
+  .hdr h2 { font-size: 14px; color: var(--orange); font-weight: 400; margin-bottom: 18px; }
+  .hdr-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .hdr-pill { display: inline-block; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); color: rgba(255,255,255,.75); padding: 4px 14px; border-radius: 3px; font-size: 11px; }
+  .hdr-pill.accent { background: var(--red); border-color: var(--red); color: #fff; font-weight: 600; }
+  .example-ribbon { background: var(--orange); color: #fff; text-align: center; padding: 10px; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
+
+  /* LAYOUT */
+  .wrap { max-width: 1260px; margin: 0 auto; padding: 40px 32px; }
+  .g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .mb { margin-bottom: 24px; }
+
+  /* SECTION LABEL */
+  .sec-label { font-size: 9px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); margin: 40px 0 16px; display: flex; align-items: center; gap: 12px; }
+  .sec-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  /* CARDS */
+  .card { background: var(--white); border-radius: 6px; padding: 28px 32px; border: 1px solid var(--border); }
+  .card-hdr { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+  .card-title { font-size: 15px; font-weight: 700; color: var(--black); margin-bottom: 10px; line-height: 1.3; }
+
+  /* SCORE */
+  .score-panel { background: var(--navy); border-radius: 6px; padding: 32px; }
+  .score-eyebrow { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 12px; }
+  .score-num { font-size: 80px; font-weight: 900; color: var(--red); line-height: 1; }
+  .score-denom { font-size: 28px; color: rgba(255,255,255,.3); font-weight: 300; }
+  .score-verdict { font-size: 18px; font-weight: 600; color: #fff; margin-top: 8px; }
+  .score-range { display: inline-block; margin-top: 10px; background: rgba(198,40,40,.15); border: 1px solid rgba(198,40,40,.4); color: #ef9a9a; padding: 4px 16px; border-radius: 3px; font-size: 11px; font-weight: 600; letter-spacing: 1px; }
+  .bar-row { margin-top: 28px; }
+  .bar-item { margin-bottom: 13px; }
+  .bar-item:last-child { margin-bottom: 0; }
+  .bar-meta { display: flex; justify-content: space-between; margin-bottom: 5px; }
+  .bar-lbl { font-size: 12px; color: rgba(255,255,255,.7); }
+  .bar-val { font-size: 12px; font-weight: 700; color: rgba(255,255,255,.9); }
+  .bar-track { height: 6px; background: rgba(255,255,255,.1); border-radius: 3px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 3px; }
+
+  /* STAT STRIP */
+  .stat-strip { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; margin-top: 20px; }
+  .stat-cell { background: var(--white); padding: 16px; text-align: center; }
+  .stat-v { font-size: 20px; font-weight: 800; color: var(--navy); }
+  .stat-v.red { color: var(--red); }
+  .stat-l { font-size: 10px; color: var(--muted); margin-top: 3px; }
+
+  /* BADGES */
+  .badge { display: inline-block; padding: 3px 9px; border-radius: 3px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .4px; }
+  .b-teal   { background: var(--teal-l);   color: var(--teal-d); }
+  .b-orange { background: var(--orange-l); color: var(--orange-d); }
+  .b-navy   { background: rgba(27,58,72,.08); color: var(--navy); }
+  .b-muted  { background: var(--light);    color: var(--muted); }
+  .b-red    { background: var(--red-l);    color: var(--red); }
+
+  /* ITEMS */
+  .item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 20px; }
+  .item:last-child { margin-bottom: 0; }
+  .item-icon { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+  .icon-teal   { background: var(--teal-l);   color: var(--teal-d); }
+  .icon-orange { background: var(--orange-l); color: var(--orange-d); }
+  .icon-red    { background: var(--red-l);    color: var(--red); }
+  .icon-navy   { background: rgba(27,58,72,.08); color: var(--navy); }
+  .item-t { font-size: 13px; font-weight: 700; color: var(--black); margin-bottom: 3px; }
+  .item-b { font-size: 12px; color: var(--mid); line-height: 1.6; }
+
+  /* CALLOUTS */
+  .callout { border-left: 3px solid var(--teal); background: var(--teal-l); padding: 14px 18px; border-radius: 0 4px 4px 0; font-size: 12px; color: var(--navy); line-height: 1.65; }
+  .callout-orange { border-left-color: var(--orange); background: var(--orange-l); }
+  .callout-red    { border-left-color: var(--red);    background: var(--red-l); }
+  .callout strong { color: var(--black); }
+
+  /* TABLES */
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th { background: var(--navy); color: rgba(255,255,255,.85); padding: 9px 12px; text-align: left; font-weight: 600; font-size: 10px; letter-spacing: .5px; text-transform: uppercase; }
+  td { padding: 9px 12px; border-bottom: 1px solid var(--border); color: var(--mid); }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: var(--light); }
+  .tc { text-align: center; } .tr { text-align: right; }
+
+  /* KW PILLS */
+  .kw { display: inline-block; background: var(--teal-l); color: var(--teal-d); border: 1px solid rgba(0,181,173,.2); border-radius: 3px; padding: 3px 10px; font-size: 11px; font-weight: 600; margin: 3px; }
+  .kw-red { background: var(--red-l); color: var(--red); border: 1px solid rgba(198,40,40,.2); }
+
+  /* STEPS */
+  .step { display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; border-radius: 4px; margin-bottom: 10px; }
+  .step:last-child { margin-bottom: 0; }
+  .step-teal   { background: var(--teal-l);   border-left: 4px solid var(--teal); }
+  .step-orange { background: var(--orange-l); border-left: 4px solid var(--orange); }
+  .step-red    { background: var(--red-l);    border-left: 4px solid var(--red); }
+  .step-num { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 12px; flex-shrink: 0; color: #fff; }
+  .num-teal   { background: var(--teal); }
+  .num-orange { background: var(--orange); }
+  .num-red    { background: var(--red); }
+  .step-t { font-size: 13px; font-weight: 700; color: var(--black); margin-bottom: 4px; }
+  .step-b { font-size: 12px; color: var(--mid); line-height: 1.55; }
+
+  /* WARNING BANNER */
+  .banner { background: var(--navy); color: #fff; border-radius: 6px; padding: 24px 32px; margin-bottom: 24px; }
+  .banner h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; color: #fff; }
+  .banner p  { font-size: 12px; color: rgba(255,255,255,.7); line-height: 1.65; }
+  .banner-stat { display: inline-block; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15); color: #fff; padding: 6px 14px; border-radius: 3px; font-size: 12px; font-weight: 600; margin: 8px 6px 0 0; }
+  .banner-stat.red { background: rgba(198,40,40,.3); border-color: rgba(198,40,40,.5); }
+
+  .warning-banner { background: var(--red); color: #fff; border-radius: 6px; padding: 24px 32px; margin-bottom: 24px; }
+  .warning-banner h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; color: #fff; }
+  .warning-banner p  { font-size: 12px; color: rgba(255,255,255,.85); line-height: 1.65; }
+
+  /* FEATURE CARD */
+  .feature-card { background: var(--white); border: 1px solid var(--border); border-top: 4px solid var(--red); border-radius: 6px; padding: 28px 32px; margin-bottom: 24px; }
+
+  /* ACTION BANNER */
+  .action-banner { background: var(--orange); color: #fff; border-radius: 6px; padding: 24px 32px; margin-top: 32px; display: flex; gap: 20px; align-items: flex-start; }
+  .ab-icon  { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+  .ab-title { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 5px; }
+  .ab-body  { font-size: 12px; color: rgba(255,255,255,.9); line-height: 1.65; }
+
+  /* FOOTER */
+  .ftr { background: var(--navy); color: rgba(255,255,255,.35); text-align: center; padding: 22px; font-size: 11px; }
+
+  @media(max-width:900px){
+    .g2{ grid-template-columns:1fr; }
+    .hdr{ padding:24px 20px; }
+    .wrap{ padding:24px 16px; }
+    .score-num{ font-size:56px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="example-ribbon">&#9733; Example Audit &mdash; For Illustration Purposes Only &#9733;</div>
+
+<div class="hdr">
+  <div class="hdr-meta">Author Opportunity Audit &nbsp;&middot;&nbsp; June 2026 &nbsp;&middot;&nbsp; Confidential</div>
+  <h1>The Complete Chair Yoga Handbook</h1>
+  <h2>Gentle Seated Exercises for Strength, Flexibility and Balance at Every Age</h2>
+  <div class="hdr-pills">
+    <span class="hdr-pill">Author: Margaret Holloway</span>
+    <span class="hdr-pill">Format: Paperback</span>
+    <span class="hdr-pill">Niche: Chair Yoga / Senior Fitness</span>
+    <span class="hdr-pill accent">Score: 36 / 100 &mdash; Limited Opportunity</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+<!-- SCORE + SUMMARY -->
+<div class="g2 mb">
+  <div class="score-panel">
+    <div class="score-eyebrow">Author Opportunity Score</div>
+    <div><span class="score-num">36</span><span class="score-denom">&thinsp;/ 100</span></div>
+    <div class="score-verdict">Limited Opportunity</div>
+    <div class="score-range">0 &ndash; 39 Range</div>
+    <div class="bar-row">
+      <div class="bar-item">
+        <div class="bar-meta"><span class="bar-lbl">Demand</span><span class="bar-val">14 / 20</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:70%;background:var(--teal);"></div></div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-meta"><span class="bar-lbl">Competition</span><span class="bar-val">3 / 20</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:15%;background:var(--red);"></div></div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-meta"><span class="bar-lbl">Positioning</span><span class="bar-val">7 / 20</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:35%;background:var(--red);"></div></div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-meta"><span class="bar-lbl">Discoverability</span><span class="bar-val">5 / 20</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:25%;background:var(--red);"></div></div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-meta"><span class="bar-lbl">Expansion Potential</span><span class="bar-val">7 / 20</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:35%;background:var(--orange);"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:20px;">
+    <div class="card">
+      <div class="card-hdr">Book Summary</div>
+      <p style="font-size:13px;color:var(--mid);line-height:1.7;"><em>The Complete Chair Yoga Handbook</em> is a seated exercise guide for seniors and those with limited mobility, covering gentle stretching, strength, and balance routines. The content is well-intentioned and the niche is popular &mdash; but the market data tells a difficult story. This is one of the most competitive niches in the health and fitness category on Amazon.</p>
+      <div class="stat-strip">
+        <div class="stat-cell"><div class="stat-v red">5</div><div class="stat-l">Books Selling Well In This Niche</div></div>
+        <div class="stat-cell"><div class="stat-v red">$107,000/mo</div><div class="stat-l">Monthly KDP Niche Revenue</div></div>
+        <div class="stat-cell"><div class="stat-v red">Evergreen</div><div class="stat-l">Content Type</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-hdr">Professional Assessment</div>
+      <p style="font-size:13px;color:var(--mid);line-height:1.7;margin-bottom:14px;">The chair yoga niche once represented a genuine opportunity. That window has closed. The top two books have accumulated over 1,600 and 1,800 reviews respectively &mdash; at a price point of $16.97. A new entry with zero reviews, publishing into the same search results, cannot compete on organic visibility or conversion rate. The revenue shown in this niche goes almost entirely to the entrenched incumbents.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;">
+        <span class="badge b-teal">Real Demand Exists</span>
+        <span class="badge b-red">Extremely Saturated</span>
+        <span class="badge b-red">1,800+ Review Barrier</span>
+        <span class="badge b-red">Low Avg. Sales Rank</span>
+        <span class="badge b-red">Price Compression</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WARNING BANNER -->
+<div class="warning-banner mb">
+  <h3>&#9888;&#65039; Saturation Warning &mdash; The Revenue Is Real. Getting to It Is Not.</h3>
+  <p>KIPscout data shows the top book earning <strong style="color:#fff;">$23,384 per month</strong> &mdash; which looks exciting until you see it has <strong style="color:#fff;">1,656 verified reviews</strong> and has been dominant for years. The average sales rank across all 22 books is <strong style="color:#fff;">921,917</strong> &mdash; meaning the majority of titles in this niche are barely selling at all. The money exists. It just doesn&rsquo;t belong to new entrants.</p>
+</div>
+
+<!-- COMPETITOR TABLE -->
+<div class="sec-label">Market Reality &mdash; Live Competitor Data (KIPscout)</div>
+<div class="card mb">
+  <div class="g2" style="gap:32px;align-items:start;">
+    <div>
+      <div class="card-title">What the Data Actually Shows</div>
+      <div class="callout callout-red" style="margin-bottom:18px;">
+        <strong>The top 3 books take almost all the revenue.</strong> Below rank #3, monthly income drops sharply. A new book with zero reviews entering this market today would compete alongside titles ranked at 132,000+ &mdash; earning under $630 per month. That is the realistic outcome for a new entrant, not the $23,000 headline figure.
+      </div>
+      <div class="item">
+        <div class="item-icon icon-red">&#9888;</div>
+        <div>
+          <div class="item-t">The review gap is insurmountable without significant investment</div>
+          <div class="item-b">The #1 book has 1,656 reviews. The #2 has 1,821. Building to even 200 reviews as a new author &mdash; without a large existing audience &mdash; typically takes 12&ndash;24 months of active campaigning. By which point the incumbents have added hundreds more.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon icon-red">&#9888;</div>
+        <div>
+          <div class="item-t">Average price is $10.71 &mdash; margin is extremely thin</div>
+          <div class="item-b">At $10.71 average price and 60% KDP royalty on print, the net per copy is minimal. Competing on price means even thinner margins. Competing on quality alone, without reviews, does not move Amazon&rsquo;s algorithm.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon icon-red">&#9888;</div>
+        <div>
+          <div class="item-t">Most books in this niche are failing</div>
+          <div class="item-b">The average sales rank of 921,917 tells the real story. Strip out the top 3 performers and the remaining 19 books are generating negligible income. This is what saturation looks like in practice.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:12px;">Live Market Data &mdash; KIPscout Research</p>
+      <table style="margin-bottom:16px;">
+        <thead><tr><th>Book</th><th class="tc">BSR</th><th class="tr">Rev / Mo</th><th class="tc">Reviews</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Chair Yoga for Seniors</strong> <span class="badge b-red" style="font-size:9px;">Dominant</span></td><td class="tc">1,902</td><td class="tr" style="color:var(--teal-d);font-weight:700;">$23,385</td><td class="tc" style="font-weight:700;color:var(--red);">1,656</td></tr>
+          <tr><td>Chair Yoga for Weight Loss</td><td class="tc">3,781</td><td class="tr" style="color:var(--teal-d);font-weight:700;">$13,864</td><td class="tc" style="font-weight:700;color:var(--red);">1,821</td></tr>
+          <tr><td>The Complete Guide to Chair Yoga</td><td class="tc">6,125</td><td class="tr">$8,364</td><td class="tc">433</td></tr>
+          <tr><td>Chair Yoga For Seniors (variant)</td><td class="tc">11,158</td><td class="tr">$5,794</td><td class="tc">413</td></tr>
+          <tr><td>Chair Yoga for Seniors (alt)</td><td class="tc">13,928</td><td class="tr">$4,440</td><td class="tc">49</td></tr>
+          <tr><td>Chair Yoga for Seniors: Guide</td><td class="tc">132,224</td><td class="tr" style="color:var(--muted);">$628</td><td class="tc">198</td></tr>
+          <tr><td style="font-weight:700;color:var(--red);">The Complete Chair Yoga Handbook</td><td class="tc"><span class="badge b-red">New</span></td><td class="tr" style="color:var(--red);">Unknown</td><td class="tc">0</td></tr>
+        </tbody>
+      </table>
+      <div class="callout callout-red">
+        <strong>Source: KIPscout (June 2026).</strong> 22 total results. Avg. sales rank: 921,917. Avg. revenue/mo across all titles: $4,888 &mdash; a figure inflated by the top two books. Median performer earns far less.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT STILL WORKS -->
+<div class="sec-label">Honest Assessment &mdash; What Works and What Doesn&rsquo;t</div>
+<div class="g2 mb">
+  <div class="card">
+    <div class="card-hdr">What Is Working (For the Incumbents)</div>
+    <div class="item">
+      <div class="item-icon icon-teal">&#10003;</div>
+      <div>
+        <div class="item-t">Demand is genuine and consistent</div>
+        <div class="item-b">Chair yoga and seated fitness for seniors is a real, growing market. The UK and US populations are ageing. Books in this space have long-term relevance. The problem is not demand &mdash; it is access to that demand for new titles.</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-icon icon-teal">&#10003;</div>
+      <div>
+        <div class="item-t">Strong average price point</div>
+        <div class="item-b">At $16.97, the top books are priced well for a print title. The market is not bargain-hunting &mdash; buyers in this niche pay for quality. The challenge is getting those buyers to see a new title at all.</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-icon icon-teal">&#10003;</div>
+      <div>
+        <div class="item-t">Content differentiation is possible</div>
+        <div class="item-b">Niching down &mdash; chair yoga for specific conditions (arthritis, Parkinson&rsquo;s, post-surgery recovery) &mdash; could carve out a smaller, less contested sub-niche. This is the only realistic route to organic visibility for a new entrant.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-hdr">Why a New Book Faces an Uphill Battle</div>
+    <div class="item">
+      <div class="item-icon icon-red">&#10005;</div>
+      <div>
+        <div class="item-t">Review walls that take years to scale</div>
+        <div class="item-b">Amazon&rsquo;s algorithm rewards books with high review counts and sustained sales velocity. A book with 1,600+ reviews has years of momentum. A new book with zero reviews is invisible in comparison &mdash; regardless of content quality.</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-icon icon-red">&#10005;</div>
+      <div>
+        <div class="item-t">Amazon Ads costs are high in saturated niches</div>
+        <div class="item-b">More competing titles bidding on the same keywords drives up cost-per-click. In a saturated niche, a new book typically needs to spend heavily on ads just to be seen &mdash; and a low review count means poor conversion even when it is seen.</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-icon icon-red">&#10005;</div>
+      <div>
+        <div class="item-t">The real revenue is already locked up</div>
+        <div class="item-b">Books 1 and 2 alone account for over $37,000/mo combined. The remaining 20 titles share what is left. A new entrant is competing for a fraction of the residual &mdash; against 19 other books that are all trying to do the same thing.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPARISON CALLOUT -->
+<div class="sec-label">The Contrast &mdash; Why Niche Selection Matters</div>
+<div class="feature-card mb">
+  <div class="g2" style="gap:32px;align-items:center;">
+    <div>
+      <div class="card-title">The Same Effort. Very Different Outcomes.</div>
+      <p style="font-size:13px;color:var(--mid);line-height:1.7;margin-bottom:18px;">Publishing a book takes the same amount of work regardless of which niche you choose. The difference between a good outcome and a frustrating one is almost entirely determined by where you publish &mdash; not how hard you work.</p>
+      <div class="callout" style="margin-bottom:14px;">
+        <strong>An author entering the dog grooming business niche</strong> today faces fewer than 15 direct competitors, most with under 200 reviews. A well-positioned book could reach page one organically with 20&ndash;30 genuine reviews and a modest ads budget.
+      </div>
+      <div class="callout callout-red">
+        <strong>An author entering the chair yoga niche</strong> today faces 22 established competitors, two of which have over 1,600 reviews and years of sales momentum behind them. The same effort produces a fraction of the result.
+      </div>
+    </div>
+    <div>
+      <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:12px;">Niche Comparison at a Glance</p>
+      <table>
+        <thead><tr><th>Factor</th><th class="tc">Dog Grooming</th><th class="tc">Chair Yoga</th></tr></thead>
+        <tbody>
+          <tr><td>Direct competitors</td><td class="tc"><span class="badge b-teal">&lt;15</span></td><td class="tc"><span class="badge b-red">22+</span></td></tr>
+          <tr><td>Top book reviews</td><td class="tc"><span class="badge b-teal">&lt;420</span></td><td class="tc"><span class="badge b-red">1,821</span></td></tr>
+          <tr><td>Avg. sales rank</td><td class="tc"><span class="badge b-teal">Low</span></td><td class="tc"><span class="badge b-red">921,917</span></td></tr>
+          <tr><td>Page one reachable?</td><td class="tc"><span class="badge b-teal">Yes — 30+ reviews</span></td><td class="tc"><span class="badge b-red">Very Unlikely</span></td></tr>
+          <tr><td>Ads cost-per-click</td><td class="tc"><span class="badge b-teal">Low</span></td><td class="tc"><span class="badge b-red">High</span></td></tr>
+          <tr><td>Opportunity Score</td><td class="tc"><span class="badge b-teal">82 / 100</span></td><td class="tc"><span class="badge b-red">36 / 100</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="sec-label">Recommended Next Steps</div>
+<div class="card mb">
+  <div class="card-hdr">If You Are Committed to This Space &mdash; What to Do</div>
+  <div class="step step-teal">
+    <div class="step-num num-teal">1</div>
+    <div>
+      <div class="step-t">Niche down to a specific condition or audience</div>
+      <div class="step-b">Rather than &ldquo;chair yoga&rdquo; broadly, target a sub-niche with less competition: chair yoga for arthritis, for Parkinson&rsquo;s disease, for post-hip-replacement recovery, or for wheelchair users. Each is a smaller market &mdash; but a smaller market with far fewer entrenched competitors.</div>
+    </div>
+  </div>
+  <div class="step step-orange">
+    <div class="step-num num-orange">2</div>
+    <div>
+      <div class="step-t">Build a review acquisition strategy before publishing</div>
+      <div class="step-b">Do not publish without a plan to generate the first 20&ndash;30 reviews quickly. This means identifying beta readers, physiotherapists, yoga instructors, or senior centre coordinators willing to read and review in advance of launch. Zero reviews at launch in a saturated niche is commercially fatal.</div>
+    </div>
+  </div>
+  <div class="step step-orange">
+    <div class="step-num num-orange">3</div>
+    <div>
+      <div class="step-t">Budget realistically for Amazon Ads</div>
+      <div class="step-b">In a saturated niche, organic visibility is unlikely without advertising. Budget at least £15&ndash;20/day for the first 60 days post-launch, and expect higher ACOS than in an uncrowded niche. Factor this into any profitability calculation before committing.</div>
+    </div>
+  </div>
+  <div class="step step-red">
+    <div class="step-num num-red">4</div>
+    <div>
+      <div class="step-t">Seriously consider pivoting to a less competitive niche</div>
+      <div class="step-b">The honest recommendation is to apply the same writing effort to a niche where the opportunity score is above 75. The content skills, the publishing knowledge, and the work ethic are transferable. The niche is not. Choosing the right market to enter is the single highest-leverage decision in self-publishing.</div>
+    </div>
+  </div>
+</div>
+
+<!-- OBSERVATION -->
+<div class="sec-label">Auditor&rsquo;s Observation</div>
+<div class="card mb" style="border-left:4px solid var(--red);">
+  <p style="font-size:13px;color:var(--mid);line-height:1.85;">The chair yoga niche is a clear example of why market research has to come before writing, not after. The revenue numbers look impressive at first glance &mdash; $23,000 a month is genuinely exciting. But when you look at who is earning that and what it would take to compete with them, the picture changes completely. Two books, each with over 1,600 reviews and years of sales history, have captured the majority of a market that 22 other books are fighting over. The average sales rank across the whole category is 921,917. That number tells you everything you need to know about what happens to most new entrants here. The talent, the effort, and the time it takes to write and publish a good book deserve to be pointed at a market that will actually reward them.</p>
+</div>
+
+<!-- ACTION BANNER -->
+<div class="action-banner">
+  <div class="ab-icon">&#128270;</div>
+  <div>
+    <div class="ab-title">The Right Niche Changes Everything</div>
+    <div class="ab-body">The difference between a 36/100 and an 82/100 is not the quality of the book &mdash; it is the market you publish into. An audit like this one exists to show you that difference before you invest months of work. If you&rsquo;d like to find the right niche for your knowledge and experience, that is exactly what this process is designed to do.</div>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<div class="ftr">
+  Author Opportunity Audit &nbsp;&middot;&nbsp; Example Only &mdash; For Illustration Purposes &nbsp;&middot;&nbsp; June 2026
+</div>
+
+</body>
+</html>
