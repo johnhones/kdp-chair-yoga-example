@@ -1,4 +1,4 @@
-<!DOCTYPE html><!-- build:20260616195924AT -->
+<!DOCTYPE html><!-- build:20260616210000BF -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -198,10 +198,14 @@
   .site-nav a:hover { background:rgba(0,0,0,.25); }
   .site-nav a.active { font-weight:600; }
   [id] { scroll-margin-top:120px; }
+  /* HARDBACK CARD */
+  .hb-card { background: var(--white); border: 1px solid var(--border); border-top: 4px solid var(--teal); border-radius: 6px; padding: 28px 32px; margin-bottom: 24px; }
+  .hb-eyebrow { font-size: 18px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-d); margin-bottom: 8px; }
+
+
 </style>
 </head>
 <body>
-
 
 <div class="hdr">
   <div class="hdr-meta">Book Opportunity Audit &nbsp;&middot;&nbsp; June 2026 &nbsp;&middot;&nbsp; Confidential</div>
@@ -217,10 +221,10 @@
 <div style="position:fixed;top:0;left:0;right:0;z-index:201;background:#1B3A48;height:58px;"></div>
 <nav class="site-nav" style="top:58px;">
   <a href="#score"><span style="font-size:16px;color:#F47421;line-height:1;">&#8594;</span>&nbsp; Opportunity Score</a>
-  <a href="#market"><span style="font-size:16px;color:#F47421;line-height:1;">&#8594;</span>&nbsp; Market Analysis</a>
-  <a href="#keywords"><span style="font-size:16px;color:#F47421;line-height:1;">&#8594;</span>&nbsp; Keywords</a>
-  <a href="#competitors"><span style="font-size:16px;color:#F47421;line-height:1;">&#8594;</span>&nbsp; Competitors</a>
   <a href="#marketing"><span style="font-size:16px;color:#F47421;line-height:1;">&#8594;</span>&nbsp; Marketing Strategy</a>
+  <a href="#market"><span style="font-size:16px;color:#F47421;line-height:1;">&#8594;</span>&nbsp; Market Analysis</a>
+  <a href="#competitors"><span style="font-size:16px;color:#F47421;line-height:1;">&#8594;</span>&nbsp; Competitors</a>
+  <a href="#keywords"><span style="font-size:16px;color:#F47421;line-height:1;">&#8594;</span>&nbsp; Keywords</a>
   <a href="#quick-wins"><span style="font-size:16px;color:#F47421;line-height:1;">&#8594;</span>&nbsp; Quick Wins</a>
 </nav>
 
@@ -247,7 +251,7 @@
         <div class="bar-track"><div class="bar-fill" style="width:15%;background:var(--orange);"></div></div>
       </div>
       <div class="bar-item">
-        <div class="bar-meta"><span class="bar-lbl tip">Growth Potential <span class="tip-q">?</span><span class="tip-box">How ready your book is to expand your catalogue - factoring in current reviews, ad activity, and the number of additional titles possible in this niche.</span></span><span class="bar-val">7 / 20</span></div>
+        <div class="bar-meta"><span class="bar-lbl tip">Growth Potential <span class="tip-q">?</span><span class="tip-box">How ready your book is to expand your catalogue, factoring in current reviews, ad activity, and the number of additional titles possible in this niche.</span></span><span class="bar-val">7 / 20</span></div>
         <div class="bar-track"><div class="bar-fill" style="width:35%;background:var(--orange);"></div></div>
       </div>
       <div class="bar-item">
@@ -260,17 +264,16 @@
   <div style="display:flex;flex-direction:column;gap:20px;">
     <div class="card">
       <div class="card-hdr">Book Summary</div>
-      <p style="font-size:13px;color:var(--mid);line-height:1.7;"><em>The Complete Chair Yoga Handbook</em> is a seated exercise guide for seniors and those with limited mobility, covering gentle stretching, strength, and balance routines. The content is well-intentioned and the niche is popular - but the market data tells a difficult story. This is one of the most competitive niches in the health and fitness category on Amazon.</p>
+      <p style="font-size:13px;color:var(--mid);line-height:1.7;"><em>The Complete Chair Yoga Handbook</em> is a seated exercise guide for seniors and those with limited mobility, covering gentle stretching, strength, and balance routines. The content is well-intentioned and the niche is popular, but the market data tells a difficult story. This is one of the most competitive niches in the health and fitness category on Amazon.</p>
       <div class="stat-strip">
-        <div class="stat-cell"><div class="stat-v">5</div><div class="stat-l">Books Selling Well In This Niche</div><div><span style="display:inline-block;margin-top:6px;font-size:10px;background:#ffebee;color:#c62828;padding:2px 10px;border-radius:20px;font-weight:700;">⚠ Saturated</span></div></div>
-        <div class="stat-cell"><div class="stat-v">$107,000/mo</div><div class="stat-l">KDP Niche Revenue</div><div><span style="display:inline-block;margin-top:6px;font-size:10px;background:#ffebee;color:#c62828;padding:2px 10px;border-radius:20px;font-weight:700;">⚠ Concentrated</span></div></div>
-
-        <div class="stat-cell"><div class="stat-v">Evergreen</div><div class="stat-l">Content Type</div><div><span style="display:inline-block;margin-top:6px;font-size:10px;background:#e0f7f4;color:#007A75;padding:2px 10px;border-radius:20px;font-weight:700;">✓ Stays Relevant</span></div></div>
+        <div class="stat-cell"><div class="stat-v red">5</div><div class="stat-l">Books Selling Well In This Niche</div><div><span style="display:inline-block;margin-top:6px;font-size:10px;background:#ffebee;color:#c62828;padding:2px 10px;border-radius:20px;font-weight:700;">&#9888; Saturated</span></div></div>
+        <div class="stat-cell"><div class="stat-v">$107,000/mo</div><div class="stat-l">KDP Niche Revenue</div><div><span style="display:inline-block;margin-top:6px;font-size:10px;background:#ffebee;color:#c62828;padding:2px 10px;border-radius:20px;font-weight:700;">&#9888; Concentrated</span></div></div>
+        <div class="stat-cell"><div class="stat-v">Evergreen</div><div class="stat-l">Content Type</div><div><span style="display:inline-block;margin-top:6px;font-size:10px;background:#e0f7f4;color:#007A75;padding:2px 10px;border-radius:20px;font-weight:700;">&#10003; Stays Relevant</span></div></div>
       </div>
     </div>
     <div class="card">
       <div class="card-hdr">Professional Assessment</div>
-      <p style="font-size:13px;color:var(--mid);line-height:1.7;margin-bottom:14px;">The chair yoga niche once represented a genuine opportunity. That window has closed. The top two books have accumulated over 1,600 and 1,800 reviews respectively - at a price point of $16.97. A new entry with zero reviews, publishing into the same search results, cannot compete on organic visibility or conversion rate. The revenue shown in this niche goes almost entirely to the entrenched incumbents.</p>
+      <p style="font-size:13px;color:var(--mid);line-height:1.7;margin-bottom:14px;">The chair yoga niche once represented a genuine opportunity. That window has closed. The top two books have accumulated over 1,600 and 1,800 reviews respectively at a price point of $16.97. A new entry with zero reviews, publishing into the same search results, cannot compete on organic visibility or conversion rate. The revenue shown in this niche goes almost entirely to the entrenched incumbents.</p>
       <div style="display:flex;flex-wrap:wrap;gap:6px;">
         <span class="badge b-teal">Real Demand Exists</span>
         <span class="badge b-red">Extremely Saturated</span>
@@ -284,11 +287,190 @@
 
 <!-- WARNING BANNER -->
 <div class="warning-banner mb">
-  <h3>&#9888;&#65039; Saturation Warning - The Revenue Is Real. Getting to It Is Not.</h3>
-  <p>KIPscout data shows the top book earning <strong style="color:#fff;">$23,384 per month</strong> - which looks exciting until you see it has <strong style="color:#fff;">1,656 verified reviews</strong> and has been dominant for years. The average sales rank across all 22 books is <strong style="color:#fff;">921,917</strong> - meaning the majority of titles in this niche are barely selling at all. The money exists. It just doesn&rsquo;t belong to new entrants.</p>
+  <h3>&#9888;&#65039; Saturation Warning: The Revenue Is Real. Getting to It Is Not.</h3>
+  <p>KIPscout data shows the top book earning <strong style="color:#fff;">$23,384 per month</strong>, which looks exciting until you see it has <strong style="color:#fff;">1,656 verified reviews</strong> and has been dominant for years. The average sales rank across all 22 books is <strong style="color:#fff;">921,917</strong>, meaning the majority of titles in this niche are barely selling at all. The money exists. It just does not belong to new entrants.</p>
 </div>
 
-<!-- COMPETITOR TABLE -->
+<!-- MARKETING STRATEGY -->
+<div id="marketing" style="position:relative;top:-48px;"></div>
+<div class="sec-label">Marketing Strategy</div>
+
+<!-- STEP 1 -->
+<div class="card mb">
+  <div class="hb-eyebrow">Step 1 - Add Your Keywords to KDP</div>
+  <p style="font-size:15px;color:var(--mid);line-height:1.7;margin-bottom:16px;">In a saturated niche, keyword strategy is even more important than in an open one. Amazon uses your keywords to decide which searches your book appears in. The right terms can steer you away from the most heavily contested pages and towards searches where you have a realistic chance of being seen.</p>
+  <div class="item">
+    <div class="item-icon icon-orange">&#10003;</div>
+    <div>
+      <div class="item-t">Avoid broad terms until your review count is established</div>
+      <div class="item-b">KDP gives you 7 keyword fields. In this niche, broad terms like &ldquo;chair yoga for seniors&rdquo; are dominated by books with 1,600+ reviews. Target these only once you have at least 30 to 50 reviews. Until then, focus on specific long-tail terms where competition is far thinner.</div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-icon icon-orange">&#10003;</div>
+    <div>
+      <div class="item-t">Lead with sub-niche terms</div>
+      <div class="item-b">Specific phrases like &ldquo;chair yoga for arthritis,&rdquo; &ldquo;seated yoga for limited mobility,&rdquo; and &ldquo;gentle chair exercises elderly&rdquo; attract buyers with a specific need and face far less competition than the primary category terms. These are your best starting keywords.</div>
+    </div>
+  </div>
+  <div class="item" style="margin-bottom:0;">
+    <div class="item-icon icon-orange">&#10003;</div>
+    <div>
+      <div class="item-t">Use the recommended keywords in this audit</div>
+      <div class="item-b">The keywords section of this audit contains research-backed terms with lower competition. These have been selected specifically to give a new book a realistic entry point. Copy them directly into your KDP keyword fields.</div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:20px;"><span style="font-size:28px;color:#F47421;line-height:1;">&#8595;</span></div>
+</div>
+
+<!-- STEP 2 -->
+<div class="card mb">
+  <div class="hb-eyebrow">Step 2 - Analyse Your Competing Books</div>
+  <p style="font-size:15px;color:var(--mid);line-height:1.7;margin-bottom:16px;">In a saturated niche, understanding the competition is not optional. The dominant books have earned their position through years of sales, reviews, and optimisation. Study them carefully before making any investment in promotion.</p>
+  <div class="item">
+    <div class="item-icon icon-orange">&#10003;</div>
+    <div>
+      <div class="item-t">Study the top two books in particular</div>
+      <div class="item-b">Chair Yoga for Seniors and Chair Yoga for Weight Loss together account for the majority of revenue in this niche. Buy them, read them, and understand exactly what they do well. Look for what they miss or what could be genuinely improved. That gap is your only realistic angle of differentiation.</div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-icon icon-orange">&#10003;</div>
+    <div>
+      <div class="item-t">Read critical reviews of the leaders</div>
+      <div class="item-b">Negative reviews of the dominant books tell you what buyers feel is missing. If multiple reviews mention a lack of progression, or insufficient focus on specific conditions, that may be a gap you can target with a sub-niche title rather than a direct competitor.</div>
+    </div>
+  </div>
+  <div class="item" style="margin-bottom:0;">
+    <div class="item-icon icon-orange">&#10003;</div>
+    <div>
+      <div class="item-t">Assess realistically whether you can outcompete</div>
+      <div class="item-b">If you cannot identify a meaningful way to differentiate from books with 1,600+ reviews and years of sales history, consider whether the sub-niche pivot in this audit is the more commercially rational path forward.</div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:20px;"><span style="font-size:28px;color:#F47421;line-height:1;">&#8595;</span></div>
+</div>
+
+<!-- STEP 3 -->
+<div class="card mb">
+  <div class="hb-eyebrow">Step 3 - Get Some Ratings and Reviews</div>
+  <p style="font-size:15px;color:var(--mid);line-height:1.7;margin-bottom:14px;">In a saturated niche, reviews are not just helpful. They are the single most critical factor that determines whether your book can compete at all. A book with fewer than 20 reviews next to competitors with 1,600+ will not convert, regardless of how good the content is.</p>
+  <p style="font-size:15px;color:var(--mid);line-height:1.7;margin-bottom:16px;">Building a review base before any paid promotion is not optional in this niche. It is a prerequisite.</p>
+  <div class="item">
+    <div class="item-icon icon-orange">&#10003;</div>
+    <div>
+      <div class="item-t">Ask for a rating or review inside your book</div>
+      <div class="item-b">Add a genuine request at the back and in the middle of your book. Many readers never reach the final pages. Keep it natural and never ask for a 5-star review specifically as Amazon takes a dim view of this.</div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-icon icon-orange">&#10003;</div>
+    <div>
+      <div class="item-t">Aim for at least 20 to 30 reviews before running any ads</div>
+      <div class="item-b">In a saturated niche, 15 reviews is not enough. Aim for 20 to 30 before spending on advertising. Shoppers compare options closely in this category and will almost always choose the book with hundreds of reviews over a newcomer with fewer than 30.</div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-icon icon-orange">&#10003;</div>
+    <div>
+      <div class="item-t">Use an ARC service to build social proof before launch</div>
+      <div class="item-b">ARC (Advance Review Copy) services such as BookSirens and Hidden Gems connect authors with readers who have opted in to receive free books in exchange for honest reviews. These services are legitimate, widely used, and fully compliant with Amazon&rsquo;s terms of service. Do not launch into this competitive niche without them.</div>
+    </div>
+  </div>
+  <div class="item" style="margin-bottom:0;">
+    <div class="item-icon icon-orange">&#10003;</div>
+    <div>
+      <div class="item-t">Reach out to physiotherapists, yoga instructors, and senior fitness communities</div>
+      <div class="item-b">For a book aimed at seniors and those with limited mobility, there are professionals and communities who work with exactly this audience every day. Yoga instructors, physiotherapists, senior centre coordinators, and occupational therapists are all potential early reviewers who can provide credible, relevant feedback and help build the social proof the book needs to compete.<br><br>For publishing support and strategy, communities like the 20Booksto50K Facebook group and the Alliance of Independent Authors are excellent free resources used by professional self-publishers worldwide.</div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:20px;"><span style="font-size:28px;color:#F47421;line-height:1;">&#8595;</span></div>
+</div>
+
+<!-- STEP 4 -->
+<div class="hb-card mb">
+  <div class="hb-eyebrow">Step 4 - Consider a Hardback Edition</div>
+  <div class="g2" style="gap:32px;align-items:start;">
+    <div>
+      <p style="font-size:13px;color:var(--mid);line-height:1.7;margin-bottom:20px;">In a saturated niche where every visual detail matters, a hardback edition can help your book stand out in Amazon search results. The top-performing books in this category are paperbacks, but a hardback signals premium quality at a glance and may justify a higher price point that improves your per-unit royalty margin.</p>
+      <div class="item">
+        <div class="item-icon icon-orange">&#10003;</div>
+        <div>
+          <div class="item-t">Price it to reflect the premium format</div>
+          <div class="item-b">KDP Print books have a minimum list price based on page count and trim size. The royalty is 60% of the list price minus the printing cost. A hardback at a higher price point can deliver stronger per-sale royalties than a paperback competing on price in a crowded market.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon icon-orange">&#10003;</div>
+        <div>
+          <div class="item-t">Exercise books are reference books. Seniors want them in print</div>
+          <div class="item-b">Readers doing chair yoga keep the book nearby during practice. A physical book that stays open on a table or chair is a functional advantage over a Kindle edition. Both paperback and hardback serve this use case better than digital.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon icon-orange">&#10003;</div>
+        <div>
+          <div class="item-t">Hardback will not overcome the review barrier alone</div>
+          <div class="item-b">Be realistic. A hardback edition increases your options and your per-unit revenue, but it does not resolve the core challenge in this niche: a review gap of 1,600+ against new entrants with zero reviews. Combine format strategy with the sub-niche approach in the Additional Opportunity section of this audit.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:12px;">Live Market Data: Chair Yoga Niche</p>
+      <table style="margin-bottom:16px;">
+        <thead><tr><th>Book</th><th class="tc">BSR</th><th class="tr">Rev / Mo</th><th class="tc">Reviews</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Chair Yoga for Seniors</strong> <span class="badge b-red" style="font-size:9px;">Dominant</span></td><td class="tc">1,902</td><td class="tr" style="color:var(--teal-d);font-weight:700;">$23,385</td><td class="tc" style="font-weight:700;color:var(--red);">1,656</td></tr>
+          <tr><td>Chair Yoga for Weight Loss</td><td class="tc">3,781</td><td class="tr" style="color:var(--teal-d);font-weight:700;">$13,864</td><td class="tc" style="font-weight:700;color:var(--red);">1,821</td></tr>
+          <tr><td>The Complete Guide to Chair Yoga</td><td class="tc">6,125</td><td class="tr">$8,364</td><td class="tc">433</td></tr>
+          <tr><td>Chair Yoga for Seniors (alt)</td><td class="tc">13,928</td><td class="tr">$4,440</td><td class="tc">49</td></tr>
+          <tr><td style="font-weight:700;color:var(--red);">The Complete Chair Yoga Handbook</td><td class="tc"><span class="badge b-red">New</span></td><td class="tr" style="color:var(--red);">Unknown</td><td class="tc">0</td></tr>
+        </tbody>
+      </table>
+      <div class="callout callout-red">
+        <strong>The challenge:</strong> Two books with 1,656 and 1,821 reviews have captured the majority of this niche. A hardback edition helps at the margins but does not resolve the fundamental review gap a new entrant faces.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 5 -->
+<div class="card mb" style="border-left:4px solid var(--teal);">
+  <div class="hb-eyebrow">Step 5 - Sense Check Before You Spend</div>
+  <p style="font-size:15px;color:var(--mid);line-height:1.7;">This is one of the most competitive niches in the Amazon fitness category. The incumbents have years of sales history and over 1,600 reviews each. Before spending any money on advertising, be honest about whether your book offers something genuinely different from what is already there, and whether you have the review base to convert browsers into buyers.<br><br><strong>Spending money on ads in a saturated niche without reviews is the fastest way to lose your entire budget.</strong></p>
+  <div style="text-align:center;margin-top:20px;"><span style="font-size:28px;color:#F47421;line-height:1;">&#8595;</span></div>
+</div>
+
+<!-- STEP 6 -->
+<div class="card mb">
+  <div class="hb-eyebrow">Step 6 - Amazon Advertising</div>
+  <p style="font-size:15px;color:var(--mid);line-height:1.7;margin-bottom:14px;">Amazon Advertising can work in saturated niches but the conditions must be right. In this niche, where 22+ established titles are already competing for ad placements on core keywords, the cost-per-click is high and conversion rates for new books without reviews are low. Advertising here without at least 20 to 30 reviews is unlikely to be profitable.</p>
+  <p style="font-size:15px;color:var(--mid);line-height:1.7;margin-bottom:14px;">If you do advertise, the approach must be disciplined: long-tail only, minimal budget, and results measured weekly.</p>
+  <p style="font-size:15px;color:var(--mid);line-height:1.7;margin-bottom:16px;font-weight:700;">There is real risk in getting it wrong. Start with $5 per day on long-tail terms only, test the data, and do not scale until your ACoS is within a profitable range.</p>
+  <div class="item">
+    <div class="item-icon icon-orange">&#10003;</div>
+    <div>
+      <div class="item-t">Understand your ACoS in a high-CPC environment</div>
+      <div class="item-b">ACoS stands for Advertising Cost of Sale. In a saturated niche, cost-per-click is significantly higher than in uncrowded niches. Expect CPCs of $0.40 to $0.90 on core terms, which means a low conversion rate (typical for books with few reviews) will produce an unprofitable ACoS. Target long-tail terms where CPC is $0.10 to $0.30.</div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-icon icon-orange">&#10003;</div>
+    <div>
+      <div class="item-t">Optimise before you scale</div>
+      <div class="item-b">Pause keywords that spend without converting. Lower bids on high-ACoS terms. In a saturated niche, scaling an unprofitable campaign simply accelerates losses. Do not increase your budget until your ACoS is consistently within your target range.</div>
+    </div>
+  </div>
+  <div class="item" style="margin-bottom:0;">
+    <div class="item-icon icon-orange">&#10003;</div>
+    <div>
+      <div class="item-t">Scale only what works</div>
+      <div class="item-b">Once you find a profitable ACoS that holds consistently, increase your daily budget with confidence. Every dollar you put in returns more than a dollar in royalties. The ceiling is not your budget. It is the total demand for books in the sub-niche you are targeting.</div>
+    </div>
+  </div>
+</div>
+
+<!-- MARKET ANALYSIS -->
 <div id="market" style="position:relative;top:-48px;"></div>
 <div class="sec-label">Market Analysis</div>
 <div class="card mb">
@@ -296,19 +478,19 @@
     <div>
       <div class="card-title">What the Data Actually Shows</div>
       <div class="callout callout-red" style="margin-bottom:18px;">
-        <strong>The top 3 books take almost all the revenue.</strong> Below rank #3, monthly income drops sharply. A new book with zero reviews entering this market today would compete alongside titles ranked at 132,000+ - earning under $630 per month. That is the realistic outcome for a new entrant, not the $23,000 headline figure.
+        <strong>The top 3 books take almost all the revenue.</strong> Below rank 3, monthly income drops sharply. A new book with zero reviews entering this market today would compete alongside titles ranked at 132,000+, earning under $630 per month. That is the realistic outcome for a new entrant, not the $23,000 headline figure.
       </div>
       <div class="item">
         <div class="item-icon icon-red">&#9888;</div>
         <div>
           <div class="item-t">The review gap is insurmountable without significant investment</div>
-          <div class="item-b">The #1 book has 1,656 reviews. The #2 has 1,821. Building to even 200 reviews as a new author - without a large existing audience - typically takes 12&ndash;24 months of active campaigning. By which point the incumbents have added hundreds more.</div>
+          <div class="item-b">The number one book has 1,656 reviews. The number two has 1,821. Building to even 200 reviews as a new author without a large existing audience typically takes 12 to 24 months of active campaigning. By which point the incumbents have added hundreds more.</div>
         </div>
       </div>
       <div class="item">
         <div class="item-icon icon-red">&#9888;</div>
         <div>
-          <div class="item-t">Average price is $10.71 - margin is extremely thin</div>
+          <div class="item-t">Average price is $10.71: margin is extremely thin</div>
           <div class="item-b">At $10.71 average price and 60% KDP royalty on print, the net per copy is minimal. Competing on price means even thinner margins. Competing on quality alone, without reviews, does not move Amazon&rsquo;s algorithm.</div>
         </div>
       </div>
@@ -321,7 +503,7 @@
       </div>
     </div>
     <div>
-      <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:12px;">Live Market Data - KIPscout Research</p>
+      <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:12px;">Live Market Data: KIPscout Research</p>
       <table style="margin-bottom:16px;">
         <thead><tr><th>Book</th><th class="tc">BSR</th><th class="tr">Rev / Mo</th><th class="tc">Reviews</th></tr></thead>
         <tbody>
@@ -335,77 +517,22 @@
         </tbody>
       </table>
       <div class="callout callout-red">
-        <strong>Source: KIPscout (June 2026).</strong> 22 total results. Avg. sales rank: 921,917. Avg. revenue/mo across all titles: $4,888 - a figure inflated by the top two books. Median performer earns far less.
+        <strong>Source: KIPscout (June 2026).</strong> 22 total results. Avg. sales rank: 921,917. Avg. revenue/mo across all titles: $4,888, a figure inflated by the top two books. Median performer earns far less.
       </div>
     </div>
   </div>
 </div>
 
-<!-- WHAT STILL WORKS -->
-<div id="marketing" style="position:relative;top:-48px;"></div>
-<div class="sec-label">Marketing Strategy</div>
-<div class="g2 mb">
-  <div class="card">
-    <div class="card-hdr">What Is Working (For the Incumbents)</div>
-    <div class="item">
-      <div class="item-icon icon-orange">&#10003;</div>
-      <div>
-        <div class="item-t">Demand is genuine and consistent</div>
-        <div class="item-b">Chair yoga and seated fitness for seniors is a real, growing market. The UK and US populations are ageing. Books in this space have long-term relevance. The problem is not demand - it is access to that demand for new titles.</div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="item-icon icon-orange">&#10003;</div>
-      <div>
-        <div class="item-t">Strong average price point</div>
-        <div class="item-b">At $16.97, the top books are priced well for a print title. The market is not bargain-hunting - buyers in this niche pay for quality. The challenge is getting those buyers to see a new title at all.</div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="item-icon icon-orange">&#10003;</div>
-      <div>
-        <div class="item-t">Content differentiation is possible</div>
-        <div class="item-b">Niching down - chair yoga for specific conditions (arthritis, Parkinson&rsquo;s, post-surgery recovery) - could carve out a smaller, less contested sub-niche. This is the only realistic route to organic visibility for a new entrant.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-hdr">Why a New Book Faces an Uphill Battle</div>
-    <div class="item">
-      <div class="item-icon icon-red">&#10005;</div>
-      <div>
-        <div class="item-t">Review walls that take years to scale</div>
-        <div class="item-b">Amazon&rsquo;s algorithm rewards books with high review counts and sustained sales velocity. A book with 1,600+ reviews has years of momentum. A new book with zero reviews is invisible in comparison - regardless of content quality.</div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="item-icon icon-red">&#10005;</div>
-      <div>
-        <div class="item-t">Amazon Ads costs are high in saturated niches</div>
-        <div class="item-b">More competing titles bidding on the same keywords drives up cost-per-click. In a saturated niche, a new book typically needs to spend heavily on ads just to be seen - and a low review count means poor conversion even when it is seen.</div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="item-icon icon-red">&#10005;</div>
-      <div>
-        <div class="item-t">The real revenue is already locked up</div>
-        <div class="item-b">Books 1 and 2 alone account for over $37,000/mo combined. The remaining 20 titles share what is left. A new entrant is competing for a fraction of the residual - against 19 other books that are all trying to do the same thing.</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- COMPARISON CALLOUT -->
+<!-- COMPETITORS -->
 <div id="competitors" style="position:relative;top:-48px;"></div>
 <div class="sec-label">Competitors</div>
-<div class="feature-card mb">
+<div class="card mb">
   <div class="g2" style="gap:32px;align-items:center;">
     <div>
       <div class="card-title">The Same Effort. Very Different Outcomes.</div>
-      <p style="font-size:13px;color:var(--mid);line-height:1.7;margin-bottom:18px;">Publishing a book takes the same amount of work regardless of which niche you choose. The difference between a good outcome and a frustrating one is almost entirely determined by where you publish - not how hard you work.</p>
+      <p style="font-size:13px;color:var(--mid);line-height:1.7;margin-bottom:18px;">Publishing a book takes the same amount of work regardless of which niche you choose. The difference between a good outcome and a frustrating one is almost entirely determined by where you publish, not how hard you work.</p>
       <div class="callout" style="margin-bottom:14px;">
-        <strong>An author entering the dog grooming business niche</strong> today faces fewer than 15 direct competitors, most with under 200 reviews. A well-positioned book could reach page one organically with 20&ndash;30 genuine reviews and a modest ads budget.
+        <strong>An author entering the dog grooming business niche</strong> today faces fewer than 15 direct competitors, most with under 200 reviews. A well-positioned book could reach page one organically with 20 to 30 genuine reviews and a modest ads budget.
       </div>
       <div class="callout callout-red">
         <strong>An author entering the chair yoga niche</strong> today faces 22 established competitors, two of which have over 1,600 reviews and years of sales momentum behind them. The same effort produces a fraction of the result.
@@ -419,11 +546,69 @@
           <tr><td>Direct competitors</td><td class="tc"><span class="badge b-teal">&lt;15</span></td><td class="tc"><span class="badge b-red">22+</span></td></tr>
           <tr><td>Top book reviews</td><td class="tc"><span class="badge b-teal">&lt;420</span></td><td class="tc"><span class="badge b-red">1,821</span></td></tr>
           <tr><td>Avg. sales rank</td><td class="tc"><span class="badge b-teal">Low</span></td><td class="tc"><span class="badge b-red">921,917</span></td></tr>
-          <tr><td>Page one reachable?</td><td class="tc"><span class="badge b-teal">Yes - 30+ reviews</span></td><td class="tc"><span class="badge b-red">Very Unlikely</span></td></tr>
+          <tr><td>Page one reachable?</td><td class="tc"><span class="badge b-teal">Yes, 30+ reviews</span></td><td class="tc"><span class="badge b-red">Very Unlikely</span></td></tr>
           <tr><td>Ads cost-per-click</td><td class="tc"><span class="badge b-teal">Low</span></td><td class="tc"><span class="badge b-red">High</span></td></tr>
           <tr><td>Opportunity Score</td><td class="tc"><span class="badge b-teal">82 / 100</span></td><td class="tc"><span class="badge b-red">36 / 100</span></td></tr>
         </tbody>
       </table>
+    </div>
+  </div>
+</div>
+
+<!-- ADDITIONAL OPPORTUNITY -->
+<div class="sec-label">Additional Opportunity</div>
+<div class="card mb" style="border-top:4px solid var(--orange);">
+  <div class="g2" style="gap:32px;align-items:start;">
+    <div>
+      <div class="card-title">The Sub-Niche Pivot: Where the Competition Thins Out</div>
+      <div class="callout callout-orange" style="margin-bottom:18px;">
+        <strong>A book specifically for one condition or audience faces a very different competitive landscape.</strong> Chair yoga for arthritis, for Parkinson&rsquo;s disease, for post-surgery recovery, or for wheelchair users: each is a smaller market, but each has far fewer entrenched competitors and a much clearer path to page one visibility.
+      </div>
+      <div class="item">
+        <div class="item-icon icon-orange">&#10003;</div>
+        <div>
+          <div class="item-t">Sub-niche titles can reach page one much faster</div>
+          <div class="item-b">A search for &ldquo;chair yoga for arthritis&rdquo; returns significantly fewer results than &ldquo;chair yoga for seniors.&rdquo; A well-written, properly optimised book targeting that specific condition could reach page one with 15 to 20 reviews, something that is virtually impossible in the main category today.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon icon-orange">&#10003;</div>
+        <div>
+          <div class="item-t">The same knowledge, a more focused application</div>
+          <div class="item-b">A chair yoga book written specifically for people with arthritis is not a fundamentally different book. It is the same expertise applied with a specific reader in mind. The routines, the guidance, the safety considerations are all things you already know. The difference is in the positioning and the title.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon icon-orange">&#10003;</div>
+        <div>
+          <div class="item-t">Sub-niche books can coexist with your existing title</div>
+          <div class="item-b">A sub-niche book is not a replacement for The Complete Chair Yoga Handbook. It is an additional title that targets a different, less contested search term. Both books can live on Amazon simultaneously, and together they create a small catalogue that compounds visibility over time.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:12px;">Suggested Sub-Niche Title Ideas</p>
+      <div class="item" style="margin-bottom:14px;">
+        <div class="item-icon icon-orange">1</div>
+        <div>
+          <div class="item-t">Chair Yoga for Arthritis</div>
+          <div class="item-b">Targets buyers with a specific condition and far fewer competing titles. The reader is highly motivated and willing to pay for content that speaks directly to their situation.</div>
+        </div>
+      </div>
+      <div class="item" style="margin-bottom:14px;">
+        <div class="item-icon icon-orange">2</div>
+        <div>
+          <div class="item-t">Seated Yoga for Parkinson&rsquo;s Disease</div>
+          <div class="item-b">A medically adjacent sub-niche with very little published competition. Physiotherapists, neurologists, and Parkinson&rsquo;s support groups are natural promotional partners for this type of content.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon icon-orange">3</div>
+        <div>
+          <div class="item-t">Gentle Chair Exercises for Post-Surgery Recovery</div>
+          <div class="item-b">Targets a specific life event with a strong emotional purchase driver. Readers in post-surgery recovery have a specific, urgent need and low tolerance for generic content. A specialist title stands out immediately.</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -437,17 +622,20 @@
     <div class="callout callout-red" style="margin-bottom:18px;">
       <strong>High competition = high cost-per-click.</strong> With 22+ established titles bidding aggressively on chair yoga keywords, ad spend in this niche is expensive and rarely profitable for a new book without an existing review base.
     </div>
+    <div class="callout callout-orange" style="margin-bottom:18px;">
+      <strong>Do not run ads without at least 20 to 30 reviews.</strong> In a saturated niche, shoppers compare options closely. A book with fewer than 20 reviews next to competitors with 400 to 1,800 will almost never convert. Ad spend is wasted until social proof is established.
+    </div>
     <div class="item">
       <div class="item-icon icon-red">1</div>
       <div>
         <div class="item-t">Do not run ads without at least 15 reviews</div>
-        <div class="item-b">In a saturated niche, shoppers compare options closely. A book with fewer than 15 reviews next to competitors with 400&ndash;1,800 will almost never convert. Ad spend is wasted until social proof is established.</div>
+        <div class="item-b">In a saturated niche, shoppers compare options closely. A book with fewer than 15 reviews next to competitors with 400 to 1,800 will almost never convert. Ad spend is wasted until social proof is established.</div>
       </div>
     </div>
     <div class="item">
       <div class="item-icon icon-red">2</div>
       <div>
-        <div class="item-t">Expect CPCs of £0.40&ndash;£0.90 on core terms</div>
+        <div class="item-t">Expect CPCs of $0.40 to $0.90 on core terms</div>
         <div class="item-b">Broad terms like &ldquo;chair yoga for seniors&rdquo; and &ldquo;yoga for beginners&rdquo; attract heavy bidding from well-funded publishers. At this CPC, breaking even requires a conversion rate that new books rarely achieve.</div>
       </div>
     </div>
@@ -461,16 +649,16 @@
   </div>
 
   <div class="card">
-    <div class="card-hdr">Keyword Overview - Chair Yoga Niche</div>
+    <div class="card-hdr">Keyword Overview: Chair Yoga Niche</div>
     <p style="font-size:12px;color:var(--mid);margin-bottom:14px;">Core keywords are highly competitive. Long-tail sub-niche terms offer the only realistic entry point for a new title.</p>
-    <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px;">High Competition - Avoid Until Established</p>
+    <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px;">High Competition: Avoid Until Established</p>
     <div style="margin-bottom:14px;">
       <span class="kw kw-red">chair yoga for seniors</span>
       <span class="kw kw-red">chair yoga book</span>
       <span class="kw kw-red">yoga for beginners over 60</span>
       <span class="kw kw-red">seated yoga exercises</span>
     </div>
-    <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px;">Long-Tail - Lower Competition</p>
+    <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px;">Long-Tail: Lower Competition</p>
     <div style="margin-bottom:14px;">
       <span class="kw">chair yoga for arthritis</span>
       <span class="kw">seated yoga for limited mobility</span>
@@ -479,7 +667,7 @@
     </div>
     <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px;">Sub-Niche Escape Routes</p>
     <div style="margin-bottom:14px;">
-      <span class="kw">chair yoga for Parkinson's</span>
+      <span class="kw">chair yoga for Parkinson&rsquo;s</span>
       <span class="kw">wheelchair yoga exercises</span>
       <span class="kw">yoga for chronic pain seniors</span>
     </div>
@@ -488,41 +676,41 @@
       <table>
         <thead><tr><th>Keyword</th><th class="tc">Competition</th><th class="tc">Est. CPC</th></tr></thead>
         <tbody>
-          <tr><td>chair yoga for seniors</td><td class="tc"><span class="badge b-red">Very High</span></td><td class="tc">£0.75</td></tr>
-          <tr><td>chair yoga book</td><td class="tc"><span class="badge b-red">High</span></td><td class="tc">£0.60</td></tr>
-          <tr><td>chair yoga for arthritis</td><td class="tc"><span class="badge b-orange">Medium</span></td><td class="tc">£0.30</td></tr>
-          <tr><td>wheelchair yoga exercises</td><td class="tc"><span class="badge b-teal">Low</span></td><td class="tc">£0.12</td></tr>
-          <tr><td>chair yoga Parkinson's</td><td class="tc"><span class="badge b-teal">Low</span></td><td class="tc">£0.10</td></tr>
+          <tr><td>chair yoga for seniors</td><td class="tc"><span class="badge b-red">Very High</span></td><td class="tc">&#163;0.75</td></tr>
+          <tr><td>chair yoga book</td><td class="tc"><span class="badge b-red">High</span></td><td class="tc">&#163;0.60</td></tr>
+          <tr><td>chair yoga for arthritis</td><td class="tc"><span class="badge b-orange">Medium</span></td><td class="tc">&#163;0.30</td></tr>
+          <tr><td>wheelchair yoga exercises</td><td class="tc"><span class="badge b-teal">Low</span></td><td class="tc">&#163;0.12</td></tr>
+          <tr><td>chair yoga Parkinson&rsquo;s</td><td class="tc"><span class="badge b-teal">Low</span></td><td class="tc">&#163;0.10</td></tr>
         </tbody>
       </table>
     </div>
   </div>
 </div>
 
-<!-- NEXT STEPS -->
+<!-- QUICK WINS -->
 <div id="quick-wins" style="position:relative;top:-48px;"></div>
 <div class="sec-label">Quick Wins</div>
 <div class="card mb">
-  <div class="card-hdr">If You Are Committed to This Space - What to Do</div>
+  <div class="card-hdr">If You Are Committed to This Space: What to Do</div>
   <div class="step step-teal">
     <div class="step-num num-teal">1</div>
     <div>
       <div class="step-t">Niche down to a specific condition or audience</div>
-      <div class="step-b">Rather than &ldquo;chair yoga&rdquo; broadly, target a sub-niche with less competition: chair yoga for arthritis, for Parkinson&rsquo;s disease, for post-hip-replacement recovery, or for wheelchair users. Each is a smaller market - but a smaller market with far fewer entrenched competitors.</div>
+      <div class="step-b">Rather than &ldquo;chair yoga&rdquo; broadly, target a sub-niche with less competition: chair yoga for arthritis, for Parkinson&rsquo;s disease, for post-hip-replacement recovery, or for wheelchair users. Each is a smaller market, but one with far fewer entrenched competitors.</div>
     </div>
   </div>
   <div class="step step-orange">
     <div class="step-num num-orange">2</div>
     <div>
-      <div class="step-t">Build a review acquisition strategy before publishing</div>
-      <div class="step-b">Do not publish without a plan to generate the first 20&ndash;30 reviews quickly. This means identifying beta readers, physiotherapists, yoga instructors, or senior centre coordinators willing to read and review in advance of launch. Zero reviews at launch in a saturated niche is commercially fatal.</div>
+      <div class="step-t">Build a review acquisition strategy before promoting</div>
+      <div class="step-b">Do not promote without a plan to generate the first 20 to 30 reviews quickly. This means identifying beta readers, physiotherapists, yoga instructors, or senior centre coordinators willing to read and review in advance of launch. Zero reviews at launch in a saturated niche is commercially fatal.</div>
     </div>
   </div>
   <div class="step step-orange">
     <div class="step-num num-orange">3</div>
     <div>
       <div class="step-t">Budget realistically for Amazon Ads</div>
-      <div class="step-b">In a saturated niche, organic visibility is unlikely without advertising. Budget at least £15&ndash;20/day for the first 60 days post-launch, and expect higher ACOS than in an uncrowded niche. Factor this into any profitability calculation before committing.</div>
+      <div class="step-b">In a saturated niche, organic visibility is unlikely without advertising. Budget at least $15 to $20/day for the first 60 days post-launch, and expect higher ACoS than in an uncrowded niche. Factor this into any profitability calculation before committing.</div>
     </div>
   </div>
   <div class="step step-red">
@@ -534,19 +722,11 @@
   </div>
 </div>
 
-<!-- OBSERVATION -->
-<div class="sec-label">Auditor&rsquo;s Observation</div>
-<div class="card mb" style="border-left:4px solid var(--red);">
-  <p style="font-size:13px;color:var(--mid);line-height:1.85;">The chair yoga niche is a clear example of why market research has to come before writing, not after. The revenue numbers look impressive at first glance - $23,000 a month is genuinely exciting. But when you look at who is earning that and what it would take to compete with them, the picture changes completely. Two books, each with over 1,600 reviews and years of sales history, have captured the majority of a market that 22 other books are fighting over. The average sales rank across the whole category is 921,917. That number tells you everything you need to know about what happens to most new entrants here. The talent, the effort, and the time it takes to write and publish a good book deserve to be pointed at a market that will actually reward them.</p>
-</div>
-
-<!-- ACTION BANNER -->
-<div class="action-banner">
-  <div class="ab-icon">&#128270;</div>
-  <div>
-    <div class="ab-title">The Right Niche Changes Everything</div>
-    <div class="ab-body">The difference between a 36/100 and an 82/100 is not the quality of the book - it is the market you publish into. An audit like this one exists to show you that difference before you invest months of work. If you&rsquo;d like to find the right niche for your knowledge and experience, that is exactly what this process is designed to do.</div>
-  </div>
+<!-- JORDAN'S OBSERVATION -->
+<div class="sec-label">Jordan&rsquo;s Observation</div>
+<div class="card mb">
+  <p style="font-size:13px;color:var(--mid);line-height:1.85;">Margaret, the research tells an honest story here. The chair yoga market is real, the demand is genuine, but the competition is formidable. Two books with over 1,600 reviews each have captured the majority of the revenue, and 19 other titles are competing for what remains. The average sales rank across the whole category is 921,917. That number tells you everything you need to know about what happens to most new entrants in this space. The recommendation in this audit is not to give up on this subject but to consider targeting it differently. A book specifically for people with arthritis, Parkinson&rsquo;s, or post-surgery recovery faces a very different competitive landscape. The same expertise, a different angle, and a much clearer path to visibility.</p>
+  <div style="margin-top:16px;background:var(--navy);border-radius:4px;padding:14px 18px;font-size:12px;color:#fff;line-height:1.65;"><span style="color:var(--teal);font-weight:700;">Note from Jordan:</span> I would welcome the opportunity to support you on your publishing journey. Whether you are looking for free coaching support or a managed service, I can help you with sponsored ad campaigns, editing, formatting, or cover design and more. Please feel free to send me a direct message if you would like to explore this further.</div>
 </div>
 
 </div><!-- /wrap -->
@@ -555,5 +735,22 @@
   Book Opportunity Audit &nbsp;&middot;&nbsp; Example Only - For Illustration Purposes &nbsp;&middot;&nbsp; June 2026
 </div>
 
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  var nav = document.querySelector('nav.site-nav');
+  if (!nav) return;
+  var links = nav.querySelectorAll('a');
+  var target = null;
+  for (var i = 0; i < links.length; i++) {
+    if (links[i].textContent.indexOf('Marketing Strategy') !== -1) {
+      target = links[i];
+      break;
+    }
+  }
+  if (target) {
+    nav.scrollLeft = target.offsetLeft - (nav.offsetWidth / 2) + (target.offsetWidth / 2);
+  }
+});
+</script>
 </body>
 </html>
