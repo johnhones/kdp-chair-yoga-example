@@ -165,6 +165,12 @@
   .tip-box { display: none; position: absolute; left: 0; bottom: calc(100% + 8px); background: #fff; color: #1B3A48; font-size: 11px; line-height: 1.55; padding: 9px 12px; border-radius: 4px; width: 210px; box-shadow: 0 4px 20px rgba(0,0,0,.25); z-index: 100; pointer-events: none; }
   .tip-box::after { content: ''; position: absolute; top: 100%; left: 8px; border: 5px solid transparent; border-top-color: #fff; }
   .tip:hover .tip-box { display: block; }
+
+  /* STICKY NAV */
+  .site-nav { position:sticky; top:0; z-index:200; background:#142e3a; border-bottom:1px solid rgba(255,255,255,.08); display:flex; overflow-x:auto; }
+  .site-nav a { display:inline-flex; align-items:center; color:rgba(255,255,255,.5); font-size:11px; font-weight:600; letter-spacing:.4px; padding:12px 16px; text-decoration:none; border-bottom:2px solid transparent; white-space:nowrap; transition:color .15s,border-color .15s; flex-shrink:0; }
+  .site-nav a:hover { color:#00B5AD; border-bottom-color:rgba(0,181,173,.4); }
+  [id] { scroll-margin-top:48px; }
 </style>
 </head>
 <body>
@@ -181,8 +187,16 @@
     <span class="hdr-pill accent">Score: 36 / 100 - Limited Opportunity</span>
   </div>
 </div>
+<nav class="site-nav">
+  <a href="#score">Opportunity Score</a>
+  <a href="#market">Market Analysis</a>
+  <a href="#keywords">Keywords</a>
+  <a href="#competitors">Competitors</a>
+  <a href="#marketing">Marketing Strategy</a>
+  <a href="#quick-wins">Quick Wins</a>
+</nav>
 
-<div class="wrap">
+<div class="wrap" id="score">
 
 <!-- SCORE + SUMMARY -->
 <div class="g2 mb">
@@ -247,6 +261,7 @@
 </div>
 
 <!-- COMPETITOR TABLE -->
+<div id="market" style="position:relative;top:-48px;"></div>
 <div class="sec-label">Market Reality - Live Competitor Data (KIPscout)</div>
 <div class="card mb">
   <div class="g2" style="gap:32px;align-items:start;">
@@ -299,6 +314,7 @@
 </div>
 
 <!-- WHAT STILL WORKS -->
+<div id="marketing" style="position:relative;top:-48px;"></div>
 <div class="sec-label">Honest Assessment - What Works and What Doesn&rsquo;t</div>
 <div class="g2 mb">
   <div class="card">
@@ -353,6 +369,7 @@
 </div>
 
 <!-- COMPARISON CALLOUT -->
+<div id="competitors" style="position:relative;top:-48px;"></div>
 <div class="sec-label">The Contrast - Why Niche Selection Matters</div>
 <div class="feature-card mb">
   <div class="g2" style="gap:32px;align-items:center;">
@@ -383,7 +400,79 @@
   </div>
 </div>
 
+<!-- KEYWORDS -->
+<div id="keywords" style="position:relative;top:-48px;"></div>
+<div class="sec-label">Keyword &amp; Advertising Strategy</div>
+<div class="g2 mb">
+  <div class="card">
+    <div class="card-hdr">Amazon Advertising Reality</div>
+    <div class="callout callout-red" style="margin-bottom:18px;">
+      <strong>High competition = high cost-per-click.</strong> With 22+ established titles bidding aggressively on chair yoga keywords, ad spend in this niche is expensive and rarely profitable for a new book without an existing review base.
+    </div>
+    <div class="item">
+      <div class="item-icon icon-red">1</div>
+      <div>
+        <div class="item-t">Do not run ads without at least 15 reviews</div>
+        <div class="item-b">In a saturated niche, shoppers compare options closely. A book with fewer than 15 reviews next to competitors with 400&ndash;1,800 will almost never convert. Ad spend is wasted until social proof is established.</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-icon icon-red">2</div>
+      <div>
+        <div class="item-t">Expect CPCs of £0.40&ndash;£0.90 on core terms</div>
+        <div class="item-b">Broad terms like &ldquo;chair yoga for seniors&rdquo; and &ldquo;yoga for beginners&rdquo; attract heavy bidding from well-funded publishers. At this CPC, breaking even requires a conversion rate that new books rarely achieve.</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-icon icon-orange">3</div>
+      <div>
+        <div class="item-t">If you advertise, target long-tail only</div>
+        <div class="item-b">Focus on specific low-volume terms like &ldquo;chair yoga for arthritis seniors,&rdquo; &ldquo;seated yoga post hip replacement,&rdquo; or &ldquo;gentle chair exercises for elderly.&rdquo; Lower search volume but dramatically lower CPC and competition.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-hdr">Keyword Overview - Chair Yoga Niche</div>
+    <p style="font-size:12px;color:var(--mid);margin-bottom:14px;">Core keywords are highly competitive. Long-tail sub-niche terms offer the only realistic entry point for a new title.</p>
+    <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px;">High Competition - Avoid Until Established</p>
+    <div style="margin-bottom:14px;">
+      <span class="kw kw-red">chair yoga for seniors</span>
+      <span class="kw kw-red">chair yoga book</span>
+      <span class="kw kw-red">yoga for beginners over 60</span>
+      <span class="kw kw-red">seated yoga exercises</span>
+    </div>
+    <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px;">Long-Tail - Lower Competition</p>
+    <div style="margin-bottom:14px;">
+      <span class="kw">chair yoga for arthritis</span>
+      <span class="kw">seated yoga for limited mobility</span>
+      <span class="kw">gentle chair exercises elderly</span>
+      <span class="kw">chair yoga post hip replacement</span>
+    </div>
+    <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px;">Sub-Niche Escape Routes</p>
+    <div style="margin-bottom:14px;">
+      <span class="kw">chair yoga for Parkinson's</span>
+      <span class="kw">wheelchair yoga exercises</span>
+      <span class="kw">yoga for chronic pain seniors</span>
+    </div>
+    <div style="margin-top:18px;padding-top:16px;border-top:1px solid var(--border);">
+      <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:10px;">Keyword Difficulty at a Glance</p>
+      <table>
+        <thead><tr><th>Keyword</th><th class="tc">Competition</th><th class="tc">Est. CPC</th></tr></thead>
+        <tbody>
+          <tr><td>chair yoga for seniors</td><td class="tc"><span class="badge b-red">Very High</span></td><td class="tc">£0.75</td></tr>
+          <tr><td>chair yoga book</td><td class="tc"><span class="badge b-red">High</span></td><td class="tc">£0.60</td></tr>
+          <tr><td>chair yoga for arthritis</td><td class="tc"><span class="badge b-orange">Medium</span></td><td class="tc">£0.30</td></tr>
+          <tr><td>wheelchair yoga exercises</td><td class="tc"><span class="badge b-teal">Low</span></td><td class="tc">£0.12</td></tr>
+          <tr><td>chair yoga Parkinson's</td><td class="tc"><span class="badge b-teal">Low</span></td><td class="tc">£0.10</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
 <!-- NEXT STEPS -->
+<div id="quick-wins" style="position:relative;top:-48px;"></div>
 <div class="sec-label">Recommended Next Steps</div>
 <div class="card mb">
   <div class="card-hdr">If You Are Committed to This Space - What to Do</div>
