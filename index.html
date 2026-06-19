@@ -250,18 +250,17 @@
   .scroll-top.visible { opacity:1; pointer-events:auto; }
   [id] { scroll-margin-top:20px; }
   /* 3D BOOK */
-  .book-wrap { perspective:800px; flex-shrink:0; }
-  .book-3d { width:110px; height:164px; position:relative; transform-style:preserve-3d; transform:rotateY(-25deg); transition:transform .4s ease; cursor:pointer; }
-  .book-3d:hover { transform:rotateY(-8deg); }
-  .book-spine { position:absolute; top:0; left:0; width:20px; height:100%; background:linear-gradient(to right,#005a56,#007A75); transform:rotateY(-90deg); transform-origin:left center; border-radius:1px 0 0 1px; display:flex; align-items:center; justify-content:center; }
-  .book-spine-txt { font-size:7px; color:rgba(255,255,255,.7); writing-mode:vertical-rl; transform:rotate(180deg); letter-spacing:1px; white-space:nowrap; }
-  .book-front { position:absolute; inset:0; border-radius:0 3px 3px 0; background:linear-gradient(160deg,#00B5AD 0%,#007A75 100%); overflow:hidden; box-shadow:4px 4px 18px rgba(0,0,0,.45); }
-  .book-front::after { content:''; position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1518611012118-696072aa579a?w=220&q=80&fit=crop') center/cover; opacity:.22; }
-  .book-front-inner { position:relative; z-index:1; padding:12px 10px; height:100%; display:flex; flex-direction:column; justify-content:space-between; }
-  .book-front-inner .bk-line { width:28px; height:2px; background:#fff; margin-bottom:8px; }
-  .book-front-inner .bk-title { font-size:9.5px; font-weight:700; color:#fff; line-height:1.35; }
-  .book-front-inner .bk-div { width:100%; height:1px; background:rgba(255,255,255,.35); margin-bottom:7px; }
-  .book-front-inner .bk-author { font-size:7.5px; color:rgba(255,255,255,.7); letter-spacing:.3px; }
+  .book-wrap { flex-shrink:0; padding-left:14px; }
+  .book-3d { width:110px; height:164px; position:relative; border-radius:2px 4px 4px 2px; background:linear-gradient(150deg,#00C4BB 0%,#007A75 100%); transform:perspective(600px) rotateY(-18deg); transition:transform .4s ease; cursor:pointer; box-shadow:14px 10px 24px rgba(0,0,0,.4), inset -4px 0 8px rgba(0,0,0,.15), inset 2px 0 5px rgba(255,255,255,.08); overflow:hidden; }
+  .book-3d:hover { transform:perspective(600px) rotateY(-6deg); }
+  .book-3d::before { content:''; position:absolute; top:0; left:-14px; bottom:0; width:14px; background:linear-gradient(to right,#003a37,#005a56); border-radius:2px 0 0 2px; transform:rotateY(55deg); transform-origin:right center; }
+  .book-3d::after { content:''; position:absolute; top:3px; right:-5px; bottom:3px; width:5px; background:linear-gradient(to right,#ccc,#ebebeb); border-radius:0 2px 2px 0; }
+  .book-bg { position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1518611012118-696072aa579a?w=220&q=80&fit=crop') center/cover; opacity:.2; }
+  .book-inner { position:relative; z-index:1; padding:12px 10px; height:100%; display:flex; flex-direction:column; justify-content:space-between; }
+  .bk-line { width:28px; height:2px; background:#fff; margin-bottom:8px; }
+  .bk-title { font-size:9.5px; font-weight:700; color:#fff; line-height:1.35; }
+  .bk-div { width:100%; height:1px; background:rgba(255,255,255,.3); margin-bottom:7px; }
+  .bk-author { font-size:7.5px; color:rgba(255,255,255,.7); letter-spacing:.3px; }
   /* HARDBACK CARD */
   .hb-card { background: var(--white); border: 1px solid var(--border); border-top: 4px solid var(--teal); border-radius: 6px; padding: 28px 32px; margin-bottom: 24px; }
   .hb-eyebrow { font-size: 18px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-d); margin-bottom: 8px; }
@@ -312,12 +311,10 @@
       </div>
       <div class="book-wrap">
         <div class="book-3d">
-          <div class="book-spine"><span class="book-spine-txt">Chair Yoga Handbook</span></div>
-          <div class="book-front">
-            <div class="book-front-inner">
-              <div><div class="bk-line"></div><div class="bk-title">The Complete<br>Chair Yoga<br>Handbook</div></div>
-              <div><div class="bk-div"></div><div class="bk-author">Margaret Holloway</div></div>
-            </div>
+          <div class="book-bg"></div>
+          <div class="book-inner">
+            <div><div class="bk-line"></div><div class="bk-title">The Complete<br>Chair Yoga<br>Handbook</div></div>
+            <div><div class="bk-div"></div><div class="bk-author">Margaret Holloway</div></div>
           </div>
         </div>
       </div>
