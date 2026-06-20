@@ -222,7 +222,7 @@
   .sb-logo a { display:block; line-height:0; }
   .sb-logo img { height:120px; width:auto; display:inline-block; position:relative; left:-8px; }
   .sb-nav { padding:16px 10px; flex:1; }
-  .sb-label { font-size:9px; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.25); padding:0 8px; margin:16px 0 6px; }
+  .sb-label { font-size:9px; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.7); padding:0 8px; margin:16px 0 6px; }
   .sb-label:first-child { margin-top:0; }
   .sb-nav a { display:flex; align-items:center; gap:10px; padding:9px 10px; border-radius:5px; text-decoration:none; color:rgba(255,255,255,.5); font-size:12px; margin-bottom:2px; transition:background .15s,color .15s; }
   .sb-nav a i { font-size:16px; flex-shrink:0; }
@@ -234,7 +234,8 @@
   /* KEYWORD TOOL */
   .kw-tool { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:24px; }
   .kw-panel { background:var(--white); border:1px solid var(--border); border-radius:6px; overflow:hidden; }
-  .kw-panel-hdr { background:var(--navy); color:#fff; padding:14px 18px; display:flex; align-items:center; justify-content:space-between; }
+  .kw-panel-hdr { background:#0d1f35; color:#fff; padding:14px 18px; display:flex; align-items:center; justify-content:space-between; min-height:94px; box-sizing:border-box; }
+  .kw-panel-hdr.rec { background:#0d1f35; }
   .kw-panel-hdr span { font-size:13px; font-weight:700; }
   .kw-count { background:var(--teal); color:#fff; font-size:10px; font-weight:700; padding:2px 8px; border-radius:20px; }
   .kw-panel-hdr.rec .kw-count { background:var(--orange); }
@@ -301,6 +302,12 @@
     <a href="#" class="act"><i class="ti ti-ad-2"></i>Ad Campaigns</a>
     <a href="#" class="act"><i class="ti ti-book-upload"></i>Build Your ARC</a>
     <a href="#" class="act"><i class="ti ti-star"></i>Get Reviews</a>
+    <hr class="sb-divider">
+    <div class="sb-label">Marketplaces</div>
+    <a href="#" onclick="return false;" class="act" style="background:rgba(244,116,33,.12);color:var(--orange);"><i class="ti ti-brand-amazon"></i>Amazon KDP</a>
+    <a href="#" onclick="return false;" class="act"><i class="ti ti-brand-tiktok"></i>TikTok Shop</a>
+    <a href="#" onclick="return false;" class="act"><i class="ti ti-building-store"></i>Barnes &amp; Noble</a>
+    <a href="#" onclick="return false;" class="act"><i class="ti ti-brand-apple"></i>Apple Books</a>
   </nav>
 </div>
 <button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
@@ -728,22 +735,22 @@
     </div>
     <div style="overflow-x:auto;">
       <table class="kw-table">
-        <thead><tr><th>Keyword</th><th class="tr">Volume</th><th class="tc">Competition</th><th></th></tr></thead>
+        <thead><tr><th>Keyword</th><th class="tr">Volume</th><th class="tc">Status</th><th></th></tr></thead>
         <tbody id="amazon-tbody">
-          <tr><td class="kw-word">chair yoga for seniors</td><td class="tr kw-vol">45,200</td><td class="tc"><span class="comp-high">High</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">chair yoga book</td><td class="tr kw-vol">18,400</td><td class="tc"><span class="comp-high">High</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">seated yoga exercises</td><td class="tr kw-vol">12,100</td><td class="tc"><span class="comp-med">Medium</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">yoga for seniors beginners</td><td class="tr kw-vol">9,800</td><td class="tc"><span class="comp-med">Medium</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">chair yoga for arthritis</td><td class="tr kw-vol">4,200</td><td class="tc"><span class="comp-med">Medium</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">gentle yoga for elderly</td><td class="tr kw-vol">3,100</td><td class="tc"><span class="comp-low">Low</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">chair yoga for balance</td><td class="tr kw-vol">2,800</td><td class="tc"><span class="comp-low">Low</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">seated yoga for limited mobility</td><td class="tr kw-vol">1,900</td><td class="tc"><span class="comp-low">Low</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">chair yoga weight loss seniors</td><td class="tr kw-vol">1,400</td><td class="tc"><span class="comp-low">Low</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">wheelchair yoga exercises</td><td class="tr kw-vol">890</td><td class="tc"><span class="comp-low">Low</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">chair yoga for Parkinson&rsquo;s</td><td class="tr kw-vol">720</td><td class="tc"><span class="comp-low">Low</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">yoga for post hip replacement</td><td class="tr kw-vol">540</td><td class="tc"><span class="comp-low">Low</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">gentle chair exercises arthritis</td><td class="tr kw-vol">280</td><td class="tc"><span class="comp-low">Low</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">seated stretching elderly routine</td><td class="tr kw-vol">210</td><td class="tc"><span class="comp-low">Low</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">chair yoga for seniors</td><td class="tr kw-vol">45,200</td><td class="tc"><span class="comp-high">Use</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">chair yoga book</td><td class="tr kw-vol">18,400</td><td class="tc"><span class="comp-high">Use</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">seated yoga exercises</td><td class="tr kw-vol">12,100</td><td class="tc"><span class="comp-high">Use</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">yoga for seniors beginners</td><td class="tr kw-vol">9,800</td><td class="tc"><span class="comp-high">Use</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">chair yoga for arthritis</td><td class="tr kw-vol">4,200</td><td class="tc"><span class="comp-high">Use</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">gentle yoga for elderly</td><td class="tr kw-vol">3,100</td><td class="tc"><span class="comp-high">Use</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">chair yoga for balance</td><td class="tr kw-vol">2,800</td><td class="tc"><span class="comp-high">Use</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">seated yoga for limited mobility</td><td class="tr kw-vol">1,900</td><td class="tc"><span class="comp-high">Use</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">chair yoga weight loss seniors</td><td class="tr kw-vol">1,400</td><td class="tc"><span class="comp-high">Use</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">wheelchair yoga exercises</td><td class="tr kw-vol">890</td><td class="tc"><span class="comp-low">Skip</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">chair yoga for Parkinson&rsquo;s</td><td class="tr kw-vol">720</td><td class="tc"><span class="comp-low">Skip</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">yoga for post hip replacement</td><td class="tr kw-vol">540</td><td class="tc"><span class="comp-low">Skip</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">gentle chair exercises arthritis</td><td class="tr kw-vol">280</td><td class="tc"><span class="comp-low">Skip</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">seated stretching elderly routine</td><td class="tr kw-vol">210</td><td class="tc"><span class="comp-low">Skip</span></td><td><button class="kw-add">+ Add</button></td></tr>
         </tbody>
       </table>
     </div>
@@ -752,7 +759,7 @@
   <!-- READABULL RECOMMENDED PANEL -->
   <div class="kw-panel">
     <div class="kw-panel-hdr rec">
-      <span><i class="ti ti-sparkles" style="margin-right:6px;font-size:14px;vertical-align:middle;"></i>Readabull Recommended</span>
+      <span><div style="display:inline-block;width:66px;height:66px;overflow:hidden;vertical-align:middle;margin-right:10px;flex-shrink:0;border-radius:50%;"><img src="logo3.png" style="width:66px;height:auto;display:block;"></div>Readerbull Recommended Keywords</span>
       <span class="kw-count" id="rec-count">7</span>
     </div>
     <div class="kw-search">
@@ -760,15 +767,15 @@
     </div>
     <div style="overflow-x:auto;">
       <table class="kw-table">
-        <thead><tr><th>Keyword</th><th class="tr">Volume</th><th class="tc">Competition</th><th></th></tr></thead>
+        <thead><tr><th>Keyword</th><th class="tr">Volume</th><th class="tc">Status</th><th></th></tr></thead>
         <tbody id="rec-tbody">
-          <tr><td class="kw-word">chair yoga for arthritis<span class="kw-rec-tag">Best Fit</span></td><td class="tr kw-vol">4,200</td><td class="tc"><span class="comp-med">Medium</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">seated yoga for limited mobility<span class="kw-rec-tag">Best Fit</span></td><td class="tr kw-vol">1,900</td><td class="tc"><span class="comp-low">Low</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">gentle yoga for elderly</td><td class="tr kw-vol">3,100</td><td class="tc"><span class="comp-low">Low</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">chair yoga for balance seniors</td><td class="tr kw-vol">2,800</td><td class="tc"><span class="comp-low">Low</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">wheelchair yoga exercises</td><td class="tr kw-vol">890</td><td class="tc"><span class="comp-low">Low</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">chair yoga Parkinson&rsquo;s disease</td><td class="tr kw-vol">720</td><td class="tc"><span class="comp-low">Low</span></td><td><button class="kw-add">+ Add</button></td></tr>
-          <tr><td class="kw-word">yoga for post hip replacement</td><td class="tr kw-vol">540</td><td class="tc"><span class="comp-low">Low</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">chair yoga for arthritis</td><td class="tr kw-vol">4,200</td><td class="tc"><span class="comp-high">Priority</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">seated yoga for limited mobility</td><td class="tr kw-vol">1,900</td><td class="tc"><span class="comp-high">Priority</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">gentle yoga for elderly</td><td class="tr kw-vol">3,100</td><td class="tc"><span class="comp-med">Best Fit</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">chair yoga for balance seniors</td><td class="tr kw-vol">2,800</td><td class="tc"><span class="comp-med">Best Fit</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">wheelchair yoga exercises</td><td class="tr kw-vol">890</td><td class="tc"><span class="comp-med">Best Fit</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">chair yoga Parkinson&rsquo;s disease</td><td class="tr kw-vol">720</td><td class="tc"><span class="comp-med">Best Fit</span></td><td><button class="kw-add">+ Add</button></td></tr>
+          <tr><td class="kw-word">yoga for post hip replacement</td><td class="tr kw-vol">540</td><td class="tc"><span class="comp-med">Best Fit</span></td><td><button class="kw-add">+ Add</button></td></tr>
         </tbody>
       </table>
     </div>
